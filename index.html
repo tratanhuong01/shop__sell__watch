@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        *:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-full">
+        <div id="main" class="w-full relative ">
+            <div id="header" class="xl:w-4/5 bg-organce md:bg-transparent w-full mx-auto flex z-10 text-white">
+                <div class="w-1/3 pl-5 flex text-white">
+                    <p onclick="category()" class="flex items-center cursor-pointer">
+                        <i class='bx bxs-category text-4xl mr-4'></i>
+                        <span class="text-xl font-semibold hidden md:block">Danh mục</sapn>
+                    </p>
+                </div>
+                <div class="w-1/2 md:w-1/3 flex justify-center">
+                    <img src="./images/logo.png" class="w-4/5 md:w-3/5 p-3 flex items-center" alt="">
+                </div>
+                <div class="w-1/3 flex justify-end">
+                    <ul class="flex items-center">
+                        <li class="p-2 hidden md:flex">
+                            <div class="flex items-center">
+                                <img src="./images/avatar.jpg" class="w-8 h-8 rounded-full mr-3" alt="">
+                                <span class="font-semibold text-xm mr-1"><a href="">Trà Hưởng</a></span>
+                                <i class='bx bxs-chevron-down'></i>
+                            </div>
+                        </li>
+                        <li class="p-2 flex relative">
+                            <i class='bx bxs-shopping-bag text-3xl'></i>
+                            <span class="w-5 h-5 rounded-full border-2 border-solid 
+                            border-white flex justify-center items-center py-0.5 font-bold 
+                            absolute right-0.5 bg-white text-yellow-500 top-0.5 text-sm">0</span>
+                        </li>
+                        <li class="p-2 flex pl-4">
+                            <i class='bx bx-search-alt-2 text-3xl flex items-center'></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full h-80 md:hidden">
+                <img src="./images/banner_1.jpg" class="w-full h-68 object-cover" alt="">
+            </div>
+        </div>
+        <div class="w-full">
+            <div class="xl:w-3/4 md:w-11/12 w-full mx-auto md:flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2">
+                    <img src="./images/product_1.png" class="w-10/12 mx-auto" alt="">
+                </div>
+                <div class="w-full md:w-1/2 px-4">
+                    <p class="font-bold text-4xl pb-5 border-b-2 border-solid 
+                    border-gray-300 hover:text-organce cursor-pointer pt-4 md:mt-0">TOP BÁN CHẠY</p>
+                    <p class="text-xl pt-5">Apple Watch Series 3</p>
+                    <p class="pt-5">|&nbsp;&nbsp;
+                        <span class="text-gray-500 text-xm">Thương Hiệu : </span>
+                        &nbsp;Apple&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <span class="text-gray-500 text-xm">Bảo hành : </span>
+                        12 tháng
+                    </p>
+                    <p class="py-7 text-organce text-4xl">
+                        9.700.000 <u>đ</u>
+                    </p>
+                    <p class="py-1">Kích thước màn hình: 1.65"</p>
+                    <p class="py-1">Độ phân giải màn hình: 390 x 312pixels</p>
+                    <p class="py-1">Luôn hiển thị: Không</p>
+                    <p class="py-1">Mật độ điểm ảnh : 303pixels</p>
+                    <p class="py-1">Multi-touch: Có</p>
+                    <p class="py-1">Loại màn hình: AMOLED</p>
+                </div>
+            </div>
+            <div class="w-7/12 mx-auto p-4 flex">
+                <div class="flex justify-center">
+                    <span class="flex items-center cursor-pointer">
+                        <i class='bx bxs-left-arrow-alt text-4xl text-gray-500'></i>
+                    </span>
+                </div>
+                <ul class="w-11/12 flex ">
+                    <li class="w-1/4 p-2">
+                        <img src="./images/product_1.png" class="w-full p-2 cursor-pointer" alt="" srcset="">
+                    </li>
+                    <li class="w-1/4 p-2">
+                        <img src="./images/product_child_1.png" class="w-full p-2 cursor-pointer" alt="" srcset="">
+                    </li>
+                    <li class="w-1/4 p-2">
+                        <img src="./images/product_1.png" class="w-full p-2 cursor-pointer" alt="" srcset="">
+                    </li>
+                    <li class="w-1/4 p-2">
+                        <img src="./images/product_child_1.png" class="w-full p-2 cursor-pointer" alt="" srcset="">
+                    </li>
+                </ul>
+                <div class="flex justify-center">
+                    <span class="flex items-center cursor-pointer">
+                        <i class='bx bxs-right-arrow-alt text-4xl text-gray-500'></i>
+                    </span>
+                </div>
+            </div>
+            <div class="xl:w-4/5 w-full mx-auto p-4 flex-col md:flex md:flex-row">
+                <div class="w-full md:w-1/4 my-2 justify-center flex  md:block">
+                    <span class="flex items-center text-xm font-semibold">
+                        <i class='bx bxs-check-shield text-5xl text-green-500 mr-3'></i>
+                        Sản phẩm chính hãng
+                    </span>
+                </div>
+                <div class="w-full md:w-1/4 my-2 hidden md:block">
+                    <span class="flex items-center text-xm font-semibold">
+                        <i class='bx bx-target-lock text-5xl text-gray-500 mr-3'></i>
+                        Giao hàng tận nơi
+                    </span>
+                </div>
+                <div class="w-full md:w-1/4 my-2  hidden md:block">
+                    <span class="flex items-center text-xm font-semibold">
+                        <i class='bx bxs-gift text-5xl text-red-600 mr-3'></i>
+                        Thanh toán tại nhà
+                    </span>
+                </div>
+                <div class="w-full md:w-1/4 my-2  hidden md:block">
+                    <span class="flex items-center text-xm font-semibold">
+                        <i class='bx bxs-meteor text-5xl text-yellow-500 mr-3'></i>
+                        Bảo hành chính hãng
+                    </span>
+                </div>
+            </div>
+            <div class="w-full md:w-11/12 xl:w-4/5 mx-auto p-4">
+                <p class="p-8 font-bold text-5xl text-center 
+                hover:text-organce cursor-pointer">
+                    SMART WATCH
+                </p>
+                <div class="w-full">
+                    <div class="w-full flex p-2">
+                        <div class="w-1/2 xl:block hidden px-2">
+                            <img src="./images/banner-left.jpg" class="w-full p-2" alt="" srcset="">
+                        </div>
+                        <div class="w-full xl:w-1/2 flex p-2 pt-0">
+                            <div class="w-1/2 p-2">
+                                <div class="w-full relative h-64 mx-auto product ">
+                                    <a href="" class="w-full mx-auto">
+                                        <img src="./images/product_4.png" class="w-full h-72 object-cover" alt=""
+                                            srcset="">
+                                    </a>
+                                    <div class="w-full hidden bg-pink-500 bg-opacity-30 h-64 absolute top-0 
+                                    left-0 justify-center items-product">
+                                        <div class="w-full flex items-center">
+                                            <div class="w-full text-center">
+                                                <button type="button"
+                                                    class="w-4/5 p-3 mx-auto rounded-full border-2 border-solid
+                                                border-white font-bold text-black bg-white hover:bg-organce hover:text-white mb-2">
+                                                    Tùy chọn
+                                                </button>
+                                                <button type="button" onclick="openModal()"
+                                                    class="w-4/5 p-3 mx-auto rounded-full border-2 border-solid
+                                                border-white font-bold text-black bg-white hover:bg-organce hover:text-white">
+                                                    Xem nhanh
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full mx-auto p-1 flex">
+                                    <div class="flex justify-center">
+                                        <span class="flex items-center cursor-pointer">
+                                            <i class='bx bxs-left-arrow-alt text-2xl text-gray-500'></i>
+                                        </span>
+                                    </div>
+                                    <ul class="w-11/12 flex ">
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_1.png" class="w-full p-2 cursor-pointer 
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_child_1.png" class="w-full p-2 cursor-pointer  
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_1.png" class="w-full p-2 cursor-pointer  
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                    </ul>
+                                    <div class="flex justify-center">
+                                        <span class="flex items-center cursor-pointer">
+                                            <i class='bx bxs-right-arrow-alt text-2xl text-gray-500'></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <p class="p-2 hover:text-organce text-center cursor-pointer 
+                                text-xm">Apple watch series 4</p>
+                                <p class="p-2 pt-0 text-organce text-center cursor-pointer 
+                                text-xm">7.700.000 <u>đ</u>&nbsp;<strike class="text-gray-500">7.900.000
+                                        <u>đ</u></strike></p>
+                            </div>
+                            <div class="w-1/2 p-2">
+                                <div class="w-full relative h-64 mx-auto product ">
+                                    <a href="" class="w-full mx-auto">
+                                        <img src="./images/product_3.png" class="w-full h-72 object-cover" alt=""
+                                            srcset="">
+                                    </a>
+                                    <div class="w-full hidden bg-pink-500 bg-opacity-30 h-64 absolute top-0 
+                                    left-0 justify-center items-product">
+                                        <div class="w-full flex items-center">
+                                            <div class="w-full text-center">
+                                                <button type="button"
+                                                    class="w-4/5 p-3 mx-auto rounded-full border-2 border-solid
+                                                border-white font-bold text-black bg-white hover:bg-organce hover:text-white mb-2">
+                                                    Tùy chọn
+                                                </button>
+                                                <button type="button" onclick="openModal()"
+                                                    class="w-4/5 p-3 mx-auto rounded-full border-2 border-solid
+                                                border-white font-bold text-black bg-white hover:bg-organce hover:text-white">
+                                                    Xem nhanh
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full mx-auto p-1 flex">
+                                    <div class="flex justify-center">
+                                        <span class="flex items-center cursor-pointer">
+                                            <i class='bx bxs-left-arrow-alt text-2xl text-gray-500'></i>
+                                        </span>
+                                    </div>
+                                    <ul class="w-11/12 flex ">
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_1.png" class="w-full p-2 cursor-pointer 
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_child_1.png" class="w-full p-2 cursor-pointer  
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_1.png" class="w-full p-2 cursor-pointer  
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                    </ul>
+                                    <div class="flex justify-center">
+                                        <span class="flex items-center cursor-pointer">
+                                            <i class='bx bxs-right-arrow-alt text-2xl text-gray-500'></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <p class="p-2 hover:text-organce text-center cursor-pointer 
+                                text-xm">Apple watch series 4</p>
+                                <p class="p-2 pt-0 text-organce text-center cursor-pointer 
+                                text-xm">7.700.000 <u>đ</u>&nbsp;<strike class="text-gray-500">7.900.000
+                                        <u>đ</u></strike></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full flex p-2">
+                        <div class="w-full flex xl:w-1/2 p-2 pt-0">
+                            <div class="w-1/2 p-2">
+                                <div class="w-full relative h-64 mx-auto product ">
+                                    <a href="" class="w-full mx-auto">
+                                        <img src="./images/product_3.png" class="w-full h-72 object-cover" alt=""
+                                            srcset="">
+                                    </a>
+                                    <div class="w-full hidden bg-pink-500 bg-opacity-30 h-64 absolute top-0 
+                                    left-0 justify-center items-product">
+                                        <div class="w-full flex items-center">
+                                            <div class="w-full text-center">
+                                                <button type="button"
+                                                    class="w-4/5 p-3 mx-auto rounded-full border-2 border-solid
+                                                border-white font-bold text-black bg-white hover:bg-organce hover:text-white mb-2">
+                                                    Tùy chọn
+                                                </button>
+                                                <button type="button" onclick="openModal()"
+                                                    class="w-4/5 p-3 mx-auto rounded-full border-2 border-solid
+                                                border-white font-bold text-black bg-white hover:bg-organce hover:text-white">
+                                                    Xem nhanh
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full mx-auto p-1 flex">
+                                    <div class="flex justify-center">
+                                        <span class="flex items-center cursor-pointer">
+                                            <i class='bx bxs-left-arrow-alt text-2xl text-gray-500'></i>
+                                        </span>
+                                    </div>
+                                    <ul class="w-11/12 flex ">
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_1.png" class="w-full p-2 cursor-pointer 
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_child_1.png" class="w-full p-2 cursor-pointer  
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_1.png" class="w-full p-2 cursor-pointer  
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                    </ul>
+                                    <div class="flex justify-center">
+                                        <span class="flex items-center cursor-pointer">
+                                            <i class='bx bxs-right-arrow-alt text-2xl text-gray-500'></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <p class="p-2 hover:text-organce text-center cursor-pointer 
+                                text-xm">Apple watch series 4</p>
+                                <p class="p-2 pt-0 text-organce text-center cursor-pointer 
+                                text-xm">7.700.000 <u>đ</u>&nbsp;<strike class="text-gray-500">7.900.000
+                                        <u>đ</u></strike></p>
+                            </div>
+                            <div class="w-1/2 p-2">
+                                <div class="w-full relative h-64 mx-auto product ">
+                                    <a href="" class="w-full mx-auto">
+                                        <img src="./images/product_4.png" class="w-full h-72 object-cover" alt=""
+                                            srcset="">
+                                    </a>
+                                    <div class="w-full hidden bg-pink-500 bg-opacity-30 h-64 absolute top-0 
+                                    left-0 justify-center items-product">
+                                        <div class="w-full flex items-center">
+                                            <div class="w-full text-center">
+                                                <button type="button"
+                                                    class="w-4/5 p-3 mx-auto rounded-full border-2 border-solid
+                                                border-white font-bold text-black bg-white hover:bg-organce hover:text-white mb-2">
+                                                    Tùy chọn
+                                                </button>
+                                                <button type="button" onclick="openModal()"
+                                                    class="w-4/5 p-3 mx-auto rounded-full border-2 border-solid
+                                                border-white font-bold text-black bg-white hover:bg-organce hover:text-white">
+                                                    Xem nhanh
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full mx-auto p-1 flex">
+                                    <div class="flex justify-center">
+                                        <span class="flex items-center cursor-pointer">
+                                            <i class='bx bxs-left-arrow-alt text-2xl text-gray-500'></i>
+                                        </span>
+                                    </div>
+                                    <ul class="w-11/12 flex ">
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_1.png" class="w-full p-2 cursor-pointer 
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_child_1.png" class="w-full p-2 cursor-pointer  
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                        <li class="w-1/3 p-1">
+                                            <img src="./images/product_1.png" class="w-full p-2 cursor-pointer  
+                                            object-cover" alt="" srcset="">
+                                        </li>
+                                    </ul>
+                                    <div class="flex justify-center">
+                                        <span class="flex items-center cursor-pointer">
+                                            <i class='bx bxs-right-arrow-alt text-2xl text-gray-500'></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <p class="p-2 hover:text-organce text-center cursor-pointer 
+                                text-xm">Apple watch series 4</p>
+                                <p class="p-2 pt-0 text-organce text-center cursor-pointer 
+                                text-xm">7.700.000 <u>đ</u>&nbsp;<strike class="text-gray-500">7.900.000
+                                        <u>đ</u></strike></p>
+                            </div>
+                        </div>
+                        <div class="w-1/2 xl:block hidden px-2">
+                            <img src="./images/banner-right.jpg" class="w-full py-0 px-2" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:w-4/5 w-full  mx-auto p-4">
+                <p class="p-8 font-bold text-5xl text-center 
+                hover:text-organce cursor-pointer">
+                    GIẢM GIÁ 30%
+                </p>
+                <div class="w-full flex flex-row">
+                    <div class="w-full sm:w-1/2 m-1 md:w-1/2 xl:w-1/3">
+                        <div class="w-full py-1 mb-2 flex shadow-xl">
+                            <div class="w-1/3">
+                                <img src="./images/product_1.png" class="w-32 h-32 p-1 object-cover" alt="">
+                            </div>
+                            <div class="w-2/3 px-4">
+                                <p class="mb-1 hover:text-organce cursor-pointer font-semibold">
+                                    Garmin Vivoactive 2S
+                                </p>
+                                <p class="mb-2 text-organce cursor-pointer text-xm">7.700.000 <u>đ</u>&nbsp;
+                                    <strike class="text-gray-500 ml-1">7.900.000 <u>đ</u></strike>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full py-1 mb-2 flex shadow-xl">
+                            <div class="w-1/3">
+                                <img src="./images/product_3.png" class="w-32 h-32 p-1 object-cover" alt="">
+                            </div>
+                            <div class="w-2/3 px-4">
+                                <p class="mb-1 hover:text-organce cursor-pointer font-semibold">
+                                    Garmin Vivoactive 2S
+                                </p>
+                                <p class="mb-2 text-organce cursor-pointer text-xm">7.700.000 <u>đ</u>&nbsp;
+                                    <strike class="text-gray-500 ml-1">7.900.000 <u>đ</u></strike>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 m-1 md:w-1/2 xl:w-1/3 hidden md:block">
+                        <div class="w-full py-1 mb-2 flex shadow-xl">
+                            <div class="w-1/3">
+                                <img src="./images/product_1.png" class="w-32 h-32 p-1 object-cover" alt="">
+                            </div>
+                            <div class="w-2/3 px-4">
+                                <p class="mb-1 hover:text-organce cursor-pointer font-semibold">
+                                    Garmin Vivoactive 2S
+                                </p>
+                                <p class="mb-2 text-organce cursor-pointer text-xm">7.700.000 <u>đ</u>&nbsp;
+                                    <strike class="text-gray-500 ml-1">7.900.000 <u>đ</u></strike>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full py-1 mb-2 flex shadow-xl">
+                            <div class="w-1/3">
+                                <img src="./images/product_3.png" class="w-32 h-32 p-1 object-cover" alt="">
+                            </div>
+                            <div class="w-2/3 px-4">
+                                <p class="mb-1 hover:text-organce cursor-pointer font-semibold">
+                                    Garmin Vivoactive 2S
+                                </p>
+                                <p class="mb-2 text-organce cursor-pointer text-xm">7.700.000 <u>đ</u>&nbsp;
+                                    <strike class="text-gray-500 ml-1">7.900.000 <u>đ</u></strike>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 m-1 xl:w-1/3 hidden xl:block">
+                        <div class="w-full py-1 mb-2 flex shadow-xl">
+                            <div class="w-1/3">
+                                <img src="./images/product_1.png" class="w-32 h-32 p-1 object-cover" alt="">
+                            </div>
+                            <div class="w-2/3 px-4">
+                                <p class="mb-1 hover:text-organce cursor-pointer font-semibold">
+                                    Garmin Vivoactive 2S
+                                </p>
+                                <p class="mb-2 text-organce cursor-pointer text-xm">7.700.000 <u>đ</u>&nbsp;
+                                    <strike class="text-gray-500 ml-1">7.900.000 <u>đ</u></strike>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full py-1 mb-2 flex shadow-xl">
+                            <div class="w-1/3">
+                                <img src="./images/product_3.png" class="w-32 h-32 p-1 object-cover" alt="">
+                            </div>
+                            <div class="w-2/3 px-4">
+                                <p class="mb-1 hover:text-organce cursor-pointer font-semibold">
+                                    Garmin Vivoactive 2S
+                                </p>
+                                <p class="mb-2 text-organce cursor-pointer text-xm">7.700.000 <u>đ</u>&nbsp;
+                                    <strike class="text-gray-500 ml-1">7.900.000 <u>đ</u></strike>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:w-4/5 w-full  mx-auto p-4">
+                <img src="./images/banner_2.jpg" class="w-full object-cover" alt="" srcset="">
+            </div>
+            <div class="xl:w-4/5 w-full flex flex-col sm:flex-row mx-auto p-4">
+                <div class="w-full sm:w-1.2 mr-10 relative news__left cursor-pointer">
+                    <div class="w-full absolute top-0 left-0 bg-black
+                    bg-opacity-50 h-full news__view">
+                        <div class="w-full relative h-full">
+                            <div class="w-full absolute top-1/2 left-1/2 transform -translate-y-1/2 
+                            -translate-x-1/2 flex justify-center flex-wrap">
+                                <p class="w-full mb-4 text-white text-xl font-semibold hover:text-organce 
+                                cursor-pointer text-center">
+                                    Mở hộp apple watch series 4
+                                </p>
+                                <i class='bx bx-play-circle text-6xl cursor-pointer text-white '></i>
+                            </div>
+                        </div>
+                    </div>
+                    <i class='bx bx-play-circle absolute text-6xl cursor-pointer text-white absolute top-1/2  
+                    left-1/2 transform -translate-y-1/2 -translate-x-1/2 news_bntPlay'></i>
+                    <img src="./images/thumnail.jpg" class="w-full max-h-148 h-full object-cover" alt="" srcset="">
+                </div>
+                <div class="w-full sm:w-1.2  px-2">
+                    <div class="w-full mt-8 mb-10 flex">
+                        <div class="w-1/4 news__left relative cursor-pointer">
+                            <div class="w-full absolute top-0 left-0 bg-black
+                            bg-opacity-50 h-full news__view">
+                                <div class="w-full relative h-full">
+                                    <div class="w-full absolute top-1/2 left-1/2 transform -translate-y-1/2 
+                                    -translate-x-1/2 flex justify-center flex-wrap">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <i class='bx bx-play-circle absolute text-4xl cursor-pointer text-white absolute top-1/2  
+                            left-1/2 transform -translate-y-1/2 -translate-x-1/2'></i>
+                            <img src="./images/thumnail_1.jpg" class="w-full object-cover" alt="" sizes="" srcset="">
+                        </div>
+                        <div class="w-3/4 flex px-4 relative">
+                            <div class="w-full absolute top-1/2 transform -translate-y-1/2">
+                                <p class="mb-2 text-xl font-semibold cursor-pointer hover:text-organce">
+                                    Chi tiết smartwatch mới nhất của samsung
+                                </p>
+                                <p class="text-gray-500">
+                                    0 Bình luận | 29/05/2021
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full mt-3 mb-10 flex">
+                        <div class="w-1/4 news__left relative cursor-pointer">
+                            <div class="w-full absolute top-0 left-0 bg-black
+                            bg-opacity-50 h-full news__view">
+                                <div class="w-full relative h-full">
+                                    <div class="w-full absolute top-1/2 left-1/2 transform -translate-y-1/2 
+                                    -translate-x-1/2 flex justify-center flex-wrap">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <i class='bx bx-play-circle absolute text-4xl cursor-pointer text-white absolute top-1/2  
+                            left-1/2 transform -translate-y-1/2 -translate-x-1/2'></i>
+                            <img src="./images/thumnail_2.jpg" class="w-full object-cover" alt="" sizes="" srcset="">
+                        </div>
+                        <div class="w-3/4 flex px-4 relative">
+                            <div class="w-full absolute top-1/2 transform -translate-y-1/2">
+                                <p class="mb-2 text-xl font-semibold cursor-pointer hover:text-organce">
+                                    Chi tiết smartwatch mới nhất của samsung
+                                </p>
+                                <p class="text-gray-500">
+                                    0 Bình luận | 29/05/2021
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full mt-3 mb-10 flex">
+                        <div class="w-1/4 news__left relative cursor-pointer">
+                            <div class="w-full absolute top-0 left-0 bg-black
+                            bg-opacity-50 h-full news__view">
+                                <div class="w-full relative h-full">
+                                    <div class="w-full absolute top-1/2 left-1/2 transform -translate-y-1/2 
+                                    -translate-x-1/2 flex justify-center flex-wrap">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <i class='bx bx-play-circle absolute text-4xl cursor-pointer text-white absolute top-1/2  
+                            left-1/2 transform -translate-y-1/2 -translate-x-1/2'></i>
+                            <img src="./images/thumnail_1.jpg" class="w-full object-cover" alt="" sizes="" srcset="">
+                        </div>
+                        <div class="w-3/4 flex px-4 relative">
+                            <div class="w-full absolute top-1/2 transform -translate-y-1/2">
+                                <p class="mb-2 text-xl font-semibold cursor-pointer hover:text-organce">
+                                    Chi tiết smartwatch mới nhất của samsung
+                                </p>
+                                <p class="text-gray-500">
+                                    0 Bình luận | 29/05/2021
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:w-4/5 w-full flex flex-col sm:flex-row mx-auto my-3 p-4">
+                <div class="w-full md:w-5/12 pb-4 md:pb-0">
+                    <p class="text-4xl mb-2 text-gray-600">Email</p>
+                    <p class="text-gray-600 text-sm">
+                        Gửi email để nhận thông tin khuyến mãi mới nhất
+                    </p>
+                </div>
+                <div class="w-full md:w-7/12 relative">
+                    <div class="w-full flex md:absolute md:top-1/2 md:transform md:-translate-y-1/2">
+                        <input type="text" class="w-4/5 border-2 border-solid border-gray-200 
+                        p-3" placeholder="Nhập email..." value="">
+                        <button type="button" class="w-1/5 border-2 border-solid border-gray-200 
+                        p-3 font-semibold">Đăng kí</button>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:w-4/5 w-full flex flex-col sm:flex-row mx-auto my-3 p-4">
+                <div class="w-full text-center md:text-left md:w-1/4 px-2">
+                    <div class="w-full flex h-32">
+                        <span class="text-4xl flex items-center font-semibold">XSMART</span>
+                    </div>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Gọi miễn phí</span>
+                        <span class="w-full">1800 1234</span>
+                    </p>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Địa chỉ</span>
+                        <span class="w-full">Tòa nhà Ladeco
+                        </span>
+                    </p>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Email</span>
+                        <span class="w-full">
+                            xsmart@gmail.com
+                        </span>
+                    </p>
+                </div>
+                <div class="w-full text-center md:text-left md:w-1/4 px-2">
+                    <div class="w-full flex h-32">
+                        <p class="flex items-center text-xl">
+                            Về chúng tôi
+                        </p>
+                    </div>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Trang chủ</span>
+                    </p>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Sản phẩm</span>
+                    </p>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Tin tức</span>
+                    </p>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Giới thiệu</span>
+                    </p>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Liên hệ</span>
+                    </p>
+                </div>
+                <div class="w-full text-center md:text-left md:w-1/4 px-2">
+                    <div class="w-full flex h-32">
+                        <p class="flex items-center text-xl">
+                            Về chúng tôi
+                        </p>
+                    </div>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Trang chủ</span>
+                    </p>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Sản phẩm</span>
+                    </p>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Tin tức</span>
+                    </p>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Giới thiệu</span>
+                    </p>
+                    <p class="w-full flex flex-wrap mb-5">
+                        <span class="w-full mb-1 text-gray-500">Liên hệ</span>
+                    </p>
+                </div>
+                <div class="w-full text-center md:text-left md:w-1/4 px-2">
+                    <div class="w-full flex h-32">
+                        <p class="flex items-center text-xl">
+                            Được chứng nhận
+                        </p>
+                    </div>
+                    <p class="w-full flex flex-wrap mb-5 justify-center">
+                        <img src="./images/thongbao.png" alt="">
+                    </p>
+                    <div class="w-full flex h-20">
+                        <p class="flex items-center text-xl">
+                            Hình thức thanh toán
+                        </p>
+                    </div>
+                    <p class="w-full flex flex-wrap mb-5 justify-center">
+                        <img src="./images/payment.png" alt="">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-screen bg-opacity-50 bg-black top-0 left-0 fixed hidden" id="second">
+        <div class="w-40 absolute top-1/2 left-1/2 transform 
+        -translate-x-1/2 -translate-y-1/2 m-2">
+            <ul class="w-full text-xl font-semibold text-white">
+                <li class="hover:text-organce px-2.5 py-4"><a href="index.html">Trang chủ</a></li>
+                <li class="hover:text-organce px-2.5 py-4"><a href="list__product.html">Sản phẩm</a></li>
+                <li class="hover:text-organce px-2.5 py-4"><a href="#">Liên hệ</a></li>
+                <li class="hover:text-organce px-2.5 py-4"><a href="#">Giới thiệu</a></li>
+                <li class="hover:text-organce px-2.5 py-4"><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+        <span onclick="category()" class="font-bold text-5xl absolute top-32 right-44 
+        text-white cursor-pointer h-0">
+            &times;
+        </span>
+    </div>
+    <script src=" ./js/javascript.js">
+    </script>
+</body>
+
+</html>
